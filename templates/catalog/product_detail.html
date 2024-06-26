@@ -1,0 +1,15 @@
+{% load static %}
+{% include '../header.html' %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<h1 class='h1_name'> Наименование одежды - {{ product_id.name }} </h1>
+<img src="{{ product_id.image.url }}" width="350" height="250">
+<p>Об одежде {{ product_id.about_product }}</p>
+<p>Тип одежды - {{ product_id.cloth_type }}</p>
+
+<ul>
+    {% for product in product_id.reviews_products.all %}
+</ul>
+{% endfor %}
+
+{% include '../footer.html' %}
